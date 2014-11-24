@@ -7,7 +7,7 @@ public interface AlpacaFarmerAPI {
 
     boolean createNewUser(String username, String password) throws NoInternetConnectionException;
 
-    boolean logInUser(String username, String password);
+    boolean logInUser(String username, String password) throws NoInternetConnectionException;
 
 
 }
