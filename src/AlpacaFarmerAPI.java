@@ -1,13 +1,15 @@
-import exceptions.NoInternetConnectionException;
+import exceptions.AlpacaFarmerAPIException;
 
 /**
  * Created by ndh13 on 23/11/14.
  */
 public interface AlpacaFarmerAPI {
 
-    boolean createNewUser(String username, String password) throws NoInternetConnectionException;
+    void createNewUser(String username, String password) throws AlpacaFarmerAPIException;
 
-    boolean logInUser(String username, String password) throws NoInternetConnectionException;
+    String logInUser(String username, String password) throws AlpacaFarmerAPIException;
+
+    void logOutUser(String sessionToken) throws AlpacaFarmerAPIException;
 
 
 }
